@@ -19,3 +19,5 @@ f = func (x int) int {
 - go doesn't have isAlphaNum() sorta function for characters even though unicode.isLetter is available
 - `s=strings.ToLower(s)` will lowercase a string
 - sorting is available via `sort.Ints(nums)`. no return value. sorting is done in place.
+- xor operator is available for integers but not for booleans. `a != b` will do the same as `a ^ b`.
+
