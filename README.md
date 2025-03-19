@@ -1,23 +1,30 @@
-# leetcode
+# LEETCODE
 
-practicing go. solving leetcode. 
+A simple approach to solve leetcode problems on my local neovim instance.
+Primarily to get realtime LSP support from my editor (neovim).
 
-this readme will contain primarily try-harder kinda try-X tips for go.
-my background is primarily in c/c++/python and the "tips" here are likely
-to reflect that
+## Requisite
 
-- a lambda definition is only available after declaration. for recursive lambda use:
-```go
-var f func (x int) int 
-f = func (x int) int {
-  if x < 1 {
-    return 0
-  } 
-  return f(x - 1)
-}
+I use bear to generate `compile_commands.json` for better LSP support.
+
+## Installation
+
+```bash
+git clone git@github.com:prasantadh/leetcode.git
 ```
-- go doesn't have isAlphaNum() sorta function for characters even though unicode.isLetter is available
-- `s=strings.ToLower(s)` will lowercase a string
-- sorting is available via `sort.Ints(nums)`. no return value. sorting is done in place.
-- xor operator is available for integers but not for booleans. `a != b` will do the same as `a ^ b`.
 
+## Usage
+
+```bash
+# to copy template.cpp into src/242-valid-anagram.cpp
+./practi.sh setup 242 valid anagram
+
+# to run 242-valid-anagram.cpp
+./practi.sh run 242
+```
+
+## Notes
+
+- There are tags on `tags.h` that can be used to categorize problems
+- Need ideas on what problem to solve next? Consult `next.md`
+- Realized something important? Put it on `notes.md`
